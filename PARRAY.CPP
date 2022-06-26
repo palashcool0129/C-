@@ -1,0 +1,33 @@
+#include<iostream.h>
+#include<conio.h>
+main()
+{
+clrscr();
+float large (float arr[],int n);
+char ch;
+int i;
+float amount[50],big;
+	for(i=0;i<50;i++)
+	{
+	cout<<"\n enter element no"<<i+1<<"\n";
+	cin>>amount[i];
+	cout<<"\n want to enter more?(y/n) \n";
+	cin>>ch;
+	if(ch!='y')
+break;
+	}
+	if(i<50)i++;
+	big=large(amount,i);
+	cout<<"\n The largest element of the array is: "<<big<<"\n";
+getch();
+return 0;
+}
+float large(float arr[],int n)
+{
+float max=arr[0];
+for(int j=1 ; j<n ; j++ )
+{if(arr[j]>max)
+max=arr[j];
+}
+return (max);
+}
